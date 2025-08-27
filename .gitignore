@@ -1,0 +1,36 @@
+# ==========================
+# Node / npm (if used later)
+# ==========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==========================
+# System / OS files
+# ==========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+desktop.ini
+
+# ==========================
+# Logs / temp files
+# ==========================
+*.log
+*.tmp
+*.swp
+*.bak
+
+# ==========================
+# VS Code
+# ==========================
+.vscode/
+.history/
+
+# ==========================
+# Environment / Secrets
+# ==========================
+.env
+*.local
