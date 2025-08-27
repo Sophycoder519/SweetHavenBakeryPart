@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Sweet Haven Bakery</title>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Sweet Haven Bakery</h1>
+    <p>Authentic South African Bakery</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Contact details (numbers clickable on phones/desktops) -->
+    <section>
+      <h2>Contact Details</h2>
+      <p><strong>Landline:</strong> <a href="tel:+27213001234">+27 21 300 1234</a></p>
+      <p><strong>Cellphone:</strong> <a href="tel:+27825550198">+27 82 555 0198</a></p>
+      <p><strong>Email:</strong> <a href="mailto:hello@sweethavenbakery.co.za">hello@sweethavenbakery.co.za</a></p>
+      <p><strong>Location:</strong> Cape Town, South Africa</p>
+    </section>
+
+    <!-- Inquiry form (HTML-only). Using mailto: opens the user's email client. -->
+    <section>
+      <h2>Send Us an Inquiry</h2>
+
+      <form action="mailto:hello@sweethavenbakery.co.za" method="post" enctype="text/plain">
+        <div>
+          <label for="name">Full Name</label><br>
+          <input type="text" id="name" name="Name" required>
+        </div>
+
+        <div>
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="Email" required>
+        </div>
+
+        <div>
+          <label for="phone">Phone (optional)</label><br>
+          <input type="tel" id="phone" name="Phone" placeholder="+27 ...">
+        </div>
+
+        <div>
+          <label for="subject">Subject</label><br>
+          <input type="text" id="subject" name="Subject" required>
+        </div>
+
+        <div>
+          <label for="message">Message</label><br>
+          <textarea id="message" name="Message" rows="6" required></textarea>
+        </div>
+
+        <div>
+          <button type="submit">Send Inquiry</button>
+          <button type="reset">Clear</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer with emoji icons -->
+  <footer>
+    <p>&copy; 2024 Sweet Haven Bakery. All rights reserved.</p>
+    <p>
+      <a href="https://www.facebook.com" target="_blank" title="Facebook" aria-label="Facebook">📘</a>
+      <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp" aria-label="WhatsApp">💬</a>
+      <a href="https://www.tiktok.com" target="_blank" title="TikTok" aria-label="TikTok">🎵</a>
+      <a href="https://www.instagram.com" target="_blank" title="Instagram" aria-label="Instagram">📸</a>
+    </p>
+  </footer>
+
+</body>
+</html>
