@@ -22,6 +22,8 @@ Focus: correct HTML structure, content integration, working navigation, and acce
 - Lays the foundation for future styling (Part 2) and interactivity (Part 3).
 
 ## 5) Key Features and Functionality
+
+## Part1
 - Semantic layout on each page: `header`, `nav`, `main`, `footer`.
 - **Home:** welcome text, operating hours, social links.
 - **About:** founding story, team, professional footer.
@@ -52,10 +54,10 @@ Part 1
 | Integrate content & images | [2025-08-23] | ✅ |
 | Validate links & basic testing | [2025-08-25] | ✅ |
 | Prepare Part 1 submission | [2025-08-26] | ✅ |
-Part 2: Add CSS / tokens / layout | [2025-09-22]__ | ✅
-Part 2: Social icons (SVG) across pages | [2025-09-22]__ | ✅
-Part 2: Responsive images (srcset/sizes) | [2025-09-26]_ | ✅
-Part 2: Accessibility pass (focus/contrast/alt) | [2025-09-23]__ | ✅
+Part 2: Add CSS / tokens / layout | [2025-09-22] | ✅
+Part 2: Social icons (SVG) across pages | [2025-09-22] | ✅
+Part 2: Responsive images (srcset/sizes) | [2025-09-26] | ✅
+Part 2: Accessibility pass (focus/contrast/alt) | [2025-09-23] | ✅
 
 
 ## 7) Part 1 Details
@@ -83,12 +85,12 @@ Part 2: Accessibility pass (focus/contrast/alt) | [2025-09-23]__ | ✅
 | [2025-08-24] | Added inquiry form (mailto) and contact numbers. |
 | [2025-08-26] | Improved footer on About page (contact, quick links, legal placeholders). |
 
-**Part 2**
-|[2025-09-22]__: Added `css/style.css` with tokens, grid layout, responsive nav/footer.
-|[2025-09-22]__: Implemented inline-SVG social icons everywhere.
-|[2025-09-26]__: Converted product images to responsive `srcset`/`sizes` (400/800/1200).
-|[2025-09-23]: Added `:focus-visible` outlines and improved interactive states.
-|[2025-09-22]: Marked active nav with `aria-current="page"`.
+|**Part 2**|
+|[2025-09-22]__: Added `css/style.css` with tokens, grid layout, responsive nav/footer.|
+|[2025-09-22]__: Implemented inline-SVG social icons everywhere.|
+|[2025-09-26]__: Converted product images to responsive `srcset`/`sizes` (400/800/1200).|
+|[2025-09-23]: Added `:focus-visible` outlines and improved interactive states.|
+|[2025-09-22]: Marked active nav with `aria-current="page"`.|
 
 ## 10) How Responsive Images Work (What I Did & Why)
 
@@ -159,18 +161,3 @@ https://www.google.com/url?sa=i&url=https%3A%2F%2Fhandletheheat.com%2Fbakery-sty
 
 https://www.google.com/url?sa=i&url=https%3A%2F%2Fbutternutbakeryblog.com%2Fmoist-chocolate-cake%2F&psig=AOvVaw02nslOEk5v9FLrUMsOa69z&ust=1756404310562000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCPDDwIvKq48DFQAAAAAdAAAAABAE
 
----
-## Push to Remote Repository
-```bash
-# first time
-git init
-git add .
-git commit -m "Part 1: HTML structure, content integration, navigation, images, and form"
-git branch -M main
-git remote add origin <YOUR_REMOTE_URL>
-git push -u origin main
-
-# subsequent updates
-git add .
-git commit -m "Update content/images per Part 1 checklist"
-git push
