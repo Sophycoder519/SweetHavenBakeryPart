@@ -74,6 +74,28 @@ Part 2: Accessibility pass (focus/contrast/alt) | [2025-09-23] | ✅
 - JS enhancements, animations, backend form handling
 
 ## 8) Sitemap
+Home
+├─ Welcome
+├─ Operating Hours
+└─ Connect With Us (social icons)
+
+About
+├─ Story & Team
+└─ Footer (contact, quick links, legal, social)
+
+Products
+├─ Cupcakes
+├─ Muffins
+├─ Cakes
+├─ Pastries
+├─ Breads
+├─ Cookies
+└─ How to Order + Footer (social)
+
+Contact
+├─ Contact Details
+├─ Inquiry Form (mailto)
+└─ Footer (contact, quick links, social)
 
 ## 9) Changelog
 
