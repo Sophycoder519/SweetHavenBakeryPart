@@ -1,7 +1,7 @@
 # Sweet Haven Bakery — Website Project
 
 ## 1) Project Title
-Sweet Haven Bakery  (Part 1)
+Sweet Haven Bakery  (Part 1 and 2)
 
 ## 2) Student Information
 - **Name:** [Wamashudu Mathavha]
@@ -9,9 +9,10 @@ Sweet Haven Bakery  (Part 1)
 - **Module:** [WEDE5020]
 
 ## 3) Project Overview (complete)
-A static, multi-page website for “Sweet Haven Bakery” built in **Part 1** with **HTML only** (no CSS/JS).  
+Part 1 focus: A static, multi-page website for “Sweet Haven Bakery” built in **Part 1** with **HTML only** (no CSS/JS).  
 Pages: Home, About, Products (static menu with images & prices), Contact (inquiry form, phone & email).  
 Focus: correct HTML structure, content integration, working navigation, and accessibility basics (alt text, headings).
+• Part 2 focus: mobile-first CSS styling & responsiveness, real social media icons (inline SVG), relative units (rem/em/%), and responsive images (srcset + sizes).
 
 ## 4) Website Goals and Objectives
 - Present bakery brand, story, and offerings clearly.
@@ -28,7 +29,22 @@ Focus: correct HTML structure, content integration, working navigation, and acce
 - **Contact:** inquiry form (mailto), clickable landline & cellphone, email & location.
 - Basic accessibility: meaningful `alt` text, ordered headings, link titles.
 
+### Part 2
+- Mobile-first CSS in `css/style.css`.
+- Design tokens (CSS variables) for colors/spacing/typography.
+- Typography: Google “Pacifico” for headings; system sans for body.
+- Relative units: text & spacing in `rem`/`em`; widths in `%` where appropriate.
+- Responsive layout:
+  - `.menu-grid` → 1 col (mobile), 2 cols (≥640px), 3 cols (≥1024px).
+  - Footer grid → 1 → 2 → 3 columns at the same breakpoints.
+- Accessible focus styles with `:focus-visible`.
+- Real social icons (Facebook, WhatsApp, TikTok, Instagram) as inline SVG + hover/focus styles.
+- Responsive images for all products using:
+  `srcset="… 400w, … 800w, … 1200w"` and
+  `sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"`.
+
 ## 6) Timeline and Milestones
+Part 1
 | Milestone | Target Date | Status |
 |---|---|---|
 | Plan content & structure | [2025-08-19] | ✅ |
@@ -36,14 +52,30 @@ Focus: correct HTML structure, content integration, working navigation, and acce
 | Integrate content & images | [2025-08-23] | ✅ |
 | Validate links & basic testing | [2025-08-25] | ✅ |
 | Prepare Part 1 submission | [2025-08-26] | ✅ |
+Part 2: Add CSS / tokens / layout | [2025-09-22]__ | ✅
+Part 2: Social icons (SVG) across pages | [2025-09-22]__ | ✅
+Part 2: Responsive images (srcset/sizes) | [2025-09-26]_ | ✅
+Part 2: Accessibility pass (focus/contrast/alt) | [2025-09-23]__ | ✅
+
 
 ## 7) Part 1 Details
 - **What’s included:** HTML pages only; images added; mailto form; no CSS/JS.
 - **What’s excluded (for Part 2/3):** layout, colors, responsiveness, JS enhancements, backend form handling.
 
+### Included in part 2
+- /index.html, /about.html, /products.html, /contact.html
+- /css/style.css (mobile-first responsive styles)
+- /images/ product images in three widths (e.g., `cake-chocolate-400.jpg`, `-800.jpg`, `-1200.jpg`)
+- Inline SVG social icons
+
+### Excluded (for Part 3)
+- JS enhancements, animations, backend form handling
+
 ## 8) Sitemap
 
 ## 9) Changelog
+
+
 | Date | Change |
 |---|---|
 | [2025-08-21] | Created `index.html`, `about.html`, `products.html`, `contact.html`. |
@@ -51,7 +83,37 @@ Focus: correct HTML structure, content integration, working navigation, and acce
 | [2025-08-24] | Added inquiry form (mailto) and contact numbers. |
 | [2025-08-26] | Improved footer on About page (contact, quick links, legal placeholders). |
 
-## 10) References
+**Part 2**
+|[2025-09-22]__: Added `css/style.css` with tokens, grid layout, responsive nav/footer.
+|[2025-09-22]__: Implemented inline-SVG social icons everywhere.
+|[2025-09-26]__: Converted product images to responsive `srcset`/`sizes` (400/800/1200).
+|[2025-09-23]: Added `:focus-visible` outlines and improved interactive states.
+|[2025-09-22]: Marked active nav with `aria-current="page"`.
+
+## 10) How Responsive Images Work (What I Did & Why)
+
+Each product image has three physical files, e.g.:
+images/cupcakes-vanilla-400.jpg
+images/cupcakes-vanilla-800.jpg
+images/cupcakes-vanilla-1200.jpg
+
+HTML pattern used across the Products page:
+
+<img
+  src="images/cupcakes-vanilla-400.jpg"
+  srcset="
+    images/cupcakes-vanilla-400.jpg 400w,
+    images/cupcakes-vanilla-800.jpg 800w,
+    images/cupcakes-vanilla-1200.jpg 1200w"
+  sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
+  alt="Vanilla cupcake with buttercream"
+  loading="lazy">
+
+- `srcset` lists available widths; `sizes` describes how wide the image appears at breakpoints.
+- The browser picks the smallest file that still looks sharp on the user’s screen → faster loads.
+
+
+## 11) References
 
 Mozilla Developer Network (2024) HTML elements reference. MDN Web Docs. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Element (Accessed: 23 August 2025). 
 

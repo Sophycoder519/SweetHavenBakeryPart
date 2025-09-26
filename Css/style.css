@@ -10,7 +10,7 @@ img { max-width: 100%; height: auto; display: block; }
 ul { list-style: none; }
 html, body { overflow-x: hidden; } /* safety against sideways scroll */
 
-/* ---------- Tokens (your colours) ---------- */
+/* ---------- Tokens---------- */
 :root{
   --primary: #E8B4B8;     /* Dusty Pink */
   --secondary: #F5EEE6;   /* Cream */
@@ -71,7 +71,7 @@ nav a{
 }
 nav a[aria-current="page"]{ background: var(--secondary); border: 1px solid var(--primary); }
 
-/* ---------- Social media icons (added snippet) ---------- */
+/* ---------- Social media icons ---------- */
 .social-icons{
   display: flex;
   gap: .6rem;
@@ -156,7 +156,7 @@ button{
   cursor: pointer;
 }
 
-/* ---------- Pseudo-classes (Rubric #6: for high marks) ---------- */
+/* ---------- Pseudo-classes ---------- */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
