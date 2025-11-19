@@ -71,7 +71,7 @@ Part 2: Add CSS / tokens / layout | [2025-09-22] | ✅
 Part 2: Social icons (SVG) across pages | [2025-09-22] | ✅
 Part 2: Responsive images (srcset/sizes) | [2025-09-26] | ✅
 Part 2: Accessibility pass (focus/contrast/alt) | [2025-09-23] | ✅
-Part 3: JavaScript and Backend Integration | 2025-10-15 | In Progress |
+Part 3: JavaScript and Backend Integration |[2025-10-15]|
 
 ## 7) Part 1 Details
 - **What’s included:** HTML pages only; images added; mailto form; no CSS/JS.
@@ -83,8 +83,14 @@ Part 3: JavaScript and Backend Integration | 2025-10-15 | In Progress |
 - /images/ product images in three widths (e.g., `cake-chocolate-400.jpg`, `-800.jpg`, `-1200.jpg`)
 - Inline SVG social icons
 
-### Excluded (for Part 3)
-- JS enhancements, animations, backend form handling
+### Included (for Part 3)
+Part 3 Details
+- **Contact Form Enhancement**: Using JavaScript to validate form fields and provide feedback to users.
+- **Form Handling**: Integrated Formspree for backend submission of form data.
+  - **JavaScript:** Used to validate user inputs (name, email, message) before submission.
+  - **Backend**: Formspree used to capture the email submissions securely.
+  - **Interactive Notifications**: Success/failure messages shown to the user after form submission.
+- **Backend**: Form submission handled through Formspree (or a similar service), ensuring no server-side code is required for backend handling.
 
 ## 8) Sitemap
 Home
@@ -126,6 +132,15 @@ Contact
 |[2025-09-26]__: Converted product images to responsive `srcset`/`sizes` (400/800/1200).|
 |[2025-09-23]: Added `:focus-visible` outlines and improved interactive states.|
 |[2025-09-22]: Marked active nav with `aria-current="page"`.|
+
+**Part 3**
+| [2025-10-01] | Integrated backend form handling for the contact form using JavaScript (AJAX). |
+| [2025-10-05] | Added interactive animations for buttons (hover/focus). |
+| [2025-10-10] | Implemented client-side validation for the contact form (email, phone). |
+| [2025-10-12] | Connected the website to a custom domain: www.sweethavenbakery.co.za. |
+| [2025-10-15] | Final adjustments to images, added alt text for accessibility. |
+| [2025-10-16] | Completed mobile-first JavaScript enhancements for form submissions. |
+| [2025-10-17] | Added service worker for offline support. |
 
 ## 10) How Responsive Images Work (What I Did & Why)
 
@@ -196,3 +211,8 @@ https://www.google.com/url?sa=i&url=https%3A%2F%2Fhandletheheat.com%2Fbakery-sty
 
 https://www.google.com/url?sa=i&url=https%3A%2F%2Fbutternutbakeryblog.com%2Fmoist-chocolate-cake%2F&psig=AOvVaw02nslOEk5v9FLrUMsOa69z&ust=1756404310562000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCPDDwIvKq48DFQAAAAAdAAAAABAE
 
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Fphoto%2F7902518-bakery-startup-small-business-delivery-one-african-american-female-cook-is-packing-handmade-and-fresh-baked-bread-and-pastries-in-boxes-and-sending-for-online-customer-purchases-in-culinary-kitchen&psig=AOvVaw0m-j0K1BIo23EVGvN_r4Zf&ust=1763642001607000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMDYm-2c_pADFQAAAAAdAAAAABAE
+
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.westend61.de%2Fen%2Fphoto%2FVABF01235%2Fyoung-man-baking-cup-cakes-at-home-topping-them-with-cream&psig=AOvVaw2fPwIKha6bTpnU-VQqIDPg&ust=1763641798133000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCPDosfOb_pADFQAAAAAdAAAAABAE
+
+https://www.istockphoto.com/photo/african-american-woman-bakers-looking-at-camera-chef-baker-in-a-chef-dress-and-hat-gm1389857295-447006096
