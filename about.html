@@ -1,29 +1,74 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - Sweet Haven Bakery</title>
 
+  <!-- SEO -->
+  <meta name="description" content="Learn about Sweet Haven Bakery in Cape Town: our story, ingredients, and the team that bakes your cupcakes, breads and custom cakes with love.">
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/sweet-haven/about.html">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Sweet Haven Bakery">
+  <meta property="og:description" content="Meet the team behind Sweet Haven Bakery in Cape Town.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOUR-USERNAME.github.io/sweet-haven/about.html">
+
   <!-- Headings font (Pacifico) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
 
-  <!-- Your stylesheet -->
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Site-wide JS -->
+  <script src="js/main.js" defer></script>
+
+  <!-- Structured data (Organization) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Sweet Haven Bakery",
+    "url": "https://YOUR-USERNAME.github.io/sweet-haven/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Long Street",
+      "addressLocality": "Cape Town",
+      "postalCode": "8001",
+      "addressCountry": "ZA"
+    },
+    "telephone": "+27 21 300 1234",
+    "email": "hello@sweethavenbakery.co.za",
+    "servesCuisine": "Bakery",
+    "sameAs": [
+      "https://www.facebook.com",
+      "https://www.instagram.com",
+      "https://www.tiktok.com"
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+
+  <!-- Skip link -->
+  <a href="#main" class="skip-link">Skip to content</a>
 
   <!-- ===================== HEADER ===================== -->
   <header>
     <div class="container header-inner">
       <h1 class="brand">Sweet Haven Bakery</h1>
       <p class="tagline">Authentic South African Bakery</p>
+      <p class="lead">
+        <a href="products.html">See our menu</a> ·
+        <a href="contact.html">Get in touch</a>
+      </p>
     </div>
   </header>
 
   <!-- ===================== NAVIGATION ===================== -->
-  <nav>
+  <nav aria-label="Primary">
     <div class="container nav-inner">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -34,8 +79,16 @@
     </div>
   </nav>
 
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs container" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">About Us</li>
+    </ol>
+  </nav>
+
   <!-- ===================== MAIN CONTENT ===================== -->
-  <main class="container">
+  <main class="container" id="main" role="main">
     <section>
       <h2>About Us</h2>
       <p>
@@ -51,6 +104,60 @@
         We have a wonderful team of bakers that bake everything with love, with the head
         baker being Ms. Ndaba herself.
       </p>
+    </section>
+
+    <!-- Responsive team gallery with lightbox (click to enlarge) -->
+    <section aria-labelledby="team-heading">
+      <h2 id="team-heading">Meet the Team</h2>
+      <p>Small but mighty! Here are the people making your favourites fresh daily.</p>
+
+      <div class="gallery">
+        <!-- Example card 1 -->
+        <figure class="card">
+          <img
+            src="images/team-sophy-400.jpg"
+            srcset="images/team-sophy-400.jpg 400w,
+                    images/team-sophy-800.jpg 800w,
+                    images/team-sophy-1200.jpg 1200w"
+            sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
+            alt="Head Baker Sophy Ndaba smiling in the kitchen"
+            data-lightbox
+            data-src="images/team-sophy-1200.jpg"
+            loading="lazy">
+          <figcaption><strong>Sophy Ndaba</strong> — Head Baker</figcaption>
+        </figure>
+
+        <!-- Example card 2 -->
+        <figure class="card">
+          <img
+            src="images/team-thabo-400.jpg"
+            srcset="images/team-thabo-400.jpg 400w,
+                    images/team-thabo-800.jpg 800w,
+                    images/team-thabo-1200.jpg 1200w"
+            sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
+            alt="Thabo frosting cupcakes"
+            data-lightbox
+            data-src="images/team-thabo-1200.jpg"
+            loading="lazy">
+          <figcaption><strong>Thabo</strong> — Pastry Chef</figcaption>
+        </figure>
+
+        <!-- Example card 3 -->
+        <figure class="card">
+          <img
+            src="images/team-lindi-400.jpg"
+            srcset="images/team-lindi-400.jpg 400w,
+                    images/team-lindi-800.jpg 800w,
+                    images/team-lindi-1200.jpg 1200w"
+            sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
+            alt="Lindi packing fresh artisanal bread"
+            data-lightbox
+            data-src="images/team-lindi-1200.jpg"
+            loading="lazy">
+          <figcaption><strong>Lindi</strong> — Artisan Bread</figcaption>
+        </figure>
+      </div>
+      <p class="small">Tip: click any photo to view it larger.</p>
     </section>
 
     <section>
@@ -78,6 +185,9 @@
         </a>
       </div>
     </section>
+
+    <!-- Back to top (anchor) -->
+    <p class="back-to-top"><a href="#top">Back to top ↑</a></p>
   </main>
 
   <!-- ===================== PROFESSIONAL FOOTER ===================== -->
@@ -125,7 +235,7 @@
         </a>
       </div>
 
-      <p class="footer-bottom">&copy; 2024 Sweet Haven Bakery. All rights reserved.</p>
+      <p class="footer-bottom">&copy; <span id="year"></span> Sweet Haven Bakery. All rights reserved.</p>
     </div>
   </footer>
 

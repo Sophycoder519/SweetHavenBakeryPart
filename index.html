@@ -2,17 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sweet Haven Bakery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sweet Haven Bakery — Authentic South African Bakery</title>
 
-  <!-- Headings font (Pacifico) -->
+  <!-- SEO -->
+  <meta name="description" content="Welcome to Sweet Haven Bakery in Cape Town. Fresh cupcakes, cakes, pastries, breads and cookies — baked with love. See hours, menu and contact info." />
+  <meta name="keywords" content="bakery, cupcakes, cakes, pastries, breads, cookies, Cape Town, custom cakes, South African bakery, Sweet Haven Bakery" />
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/sweet-haven/index.html" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sweet Haven Bakery — Authentic South African Bakery" />
+  <meta property="og:description" content="Fresh cupcakes, cakes, pastries, breads & cookies in Cape Town. View our menu and contact us for custom orders." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://YOUR-USERNAME.github.io/sweet-haven/index.html" />
+  <!-- Optional preview image if you have one -->
+  <!-- <meta property="og:image" content="https://YOUR-USERNAME.github.io/sweet-haven/images/hero-bakery-1200.jpg" /> -->
+
+  <!-- Fonts (Pacifico for headings) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
 
-  <!--stylesheet -->
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Site JS -->
+  <script src="js/main.js" defer></script>
+
+  <!-- Structured Data: Website + Local Bakery -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Sweet Haven Bakery",
+    "url": "https://YOUR-USERNAME.github.io/sweet-haven/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://YOUR-USERNAME.github.io/sweet-haven/products.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Sweet Haven Bakery",
+    "url": "https://YOUR-USERNAME.github.io/sweet-haven/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Long Street",
+      "addressLocality": "Cape Town",
+      "postalCode": "8001",
+      "addressCountry": "ZA"
+    },
+    "telephone": "+27 21 300 1234",
+    "email": "hello@sweethavenbakery.co.za",
+    "servesCuisine": "Bakery",
+    "sameAs": [
+      "https://www.facebook.com",
+      "https://www.instagram.com",
+      "https://www.tiktok.com"
+    ]
+  }
+  </script>
 </head>
 <body>
+
+  <!-- Skip to main (accessibility) -->
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- ===================== HEADER ===================== -->
   <header>
@@ -23,7 +81,7 @@
   </header>
 
   <!-- ===================== NAVIGATION ===================== -->
-  <nav>
+  <nav aria-label="Primary">
     <div class="container nav-inner">
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
@@ -35,22 +93,36 @@
   </nav>
 
   <!-- ===================== MAIN CONTENT ===================== -->
-  <main class="container">
+  <main class="container" id="main">
+    <!-- Hero (optional image; leave figure if you’ll add hero later) -->
+    <figure class="hero" aria-label="Bakery highlights">
+      <!-- If you have a hero image, uncomment and replace paths
+      <img
+        src="images/hero-bakery-1200.jpg"
+        srcset="images/hero-bakery-800.jpg 800w, images/hero-bakery-1200.jpg 1200w"
+        sizes="100vw"
+        alt="Fresh cupcakes and bread displayed at Sweet Haven Bakery"
+        loading="lazy" decoding="async">
+      -->
+      <figcaption>Freshly baked cupcakes, cakes, breads & pastries — daily.</figcaption>
+    </figure>
+
     <section>
       <h2>Welcome</h2>
       <p>
-        Welcome to Sweet Haven where you will experience the taste of traditional
-        South African baking made with love.
+        Welcome to Sweet Haven — experience the taste of traditional South African baking
+        made with love. Browse our <a href="products.html">menu</a> or <a href="contact.html">get in touch</a>
+        for custom cakes and bulk orders.
       </p>
     </section>
 
     <section>
       <h2>Operating Hours</h2>
       <ul class="hours">
-        <li>Monday – Friday: 07:00 AM – 06:00 PM</li>
-        <li>Saturday: 08:00 AM – 04:00 PM</li>
+        <li>Monday – Friday: 07:00 – 18:00</li>
+        <li>Saturday: 08:00 – 16:00</li>
         <li>Sunday: Closed</li>
-        <li>Public Holidays: 08:00 AM – 01:00 PM</li>
+        <li>Public Holidays: 08:00 – 13:00</li>
       </ul>
     </section>
 
@@ -62,19 +134,16 @@
             <path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.16 1.8.16v2h-1c-1 0-1.3.62-1.3 1.25V12h2.2l-.35 3h-1.85v7A10 10 0 0 0 22 12z"/>
           </svg>
         </a>
-
         <a class="whatsapp" href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="WhatsApp">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M20 3.5A10 10 0 0 0 4 17.3L3 21l3.8-1A10 10 0 1 0 20 3.5zm-8.1 3.4c-.3-.01-.7.02-1 .3-.3.3-.9 1-.9 2s.6 2.3 1.8 3.4c1.2 1.2 2.8 1.8 3.4 1.8.7 0 1.6-.5 1.9-.9.2-.4.2-.7.1-.8l-1.2-1c-.2-.2-.4-.2-.6-.1l-.7.3c-.2.1-.4 0-.5-.1l-1.1-.8c-.4-.3-.9-.9-1.1-1.2-.1-.2-.1-.4.1-.6l.3-.6c.1-.2 0-.4-.1-.6L12 7c-.1-.1-.3-.1-.5-.1z"/>
           </svg>
         </a>
-
         <a class="tiktok" href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" title="TikTok" aria-label="TikTok">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M16 3h-2v8.5a3.5 3.5 0 1 1-3-3.45V6a6.5 6.5 0 1 0 9 6.1v-1.2a6 6 0 0 1-4-1.9V3z"/>
           </svg>
         </a>
-
         <a class="instagram" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13zm0 2a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm6-2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
@@ -84,10 +153,12 @@
     </section>
   </main>
 
+  <!-- Back to top button is auto-injected by main.js if missing -->
+
   <!-- ===================== FOOTER ===================== -->
   <footer>
     <div class="container footer-inner">
-      <p class="footer-bottom">&copy; 2024 Sweet Haven Bakery. All rights reserved.</p>
+      <p class="footer-bottom">&copy; <span id="year"></span> Sweet Haven Bakery. All rights reserved.</p>
     </div>
   </footer>
 

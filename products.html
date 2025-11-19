@@ -1,17 +1,104 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Products - Sweet Haven Bakery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products & Menu - Sweet Haven Bakery</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Browse Sweet Haven Bakery’s cupcakes, muffins, cakes, pastries, breads and cookies. Fresh, handcrafted bakes in Cape Town with prices and images." />
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/sweet-haven/products.html" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sweet Haven Bakery — Products & Menu" />
+  <meta property="og:description" content="See our cupcakes, cakes, breads and more — with images and prices. Order yours today." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://YOUR-USERNAME.github.io/sweet-haven/products.html" />
 
   <!-- Headings font (Pacifico) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
 
-  <!--stylesheet -->
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Site-wide JS (separate file) -->
+  <script src="js/main.js" defer></script>
+
+  <!-- Structured Data: a few representative products (extend as you like) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Product",
+          "name": "Vanilla Bliss Cupcake",
+          "image": [
+            "https://YOUR-USERNAME.github.io/sweet-haven/images/cupcakes-vanilla-400.jpg",
+            "https://YOUR-USERNAME.github.io/sweet-haven/images/cupcakes-vanilla-800.jpg",
+            "https://YOUR-USERNAME.github.io/sweet-haven/images/cupcakes-vanilla-1200.jpg"
+          ],
+          "description": "Classic vanilla sponge with vanilla buttercream.",
+          "offers": {
+            "@type": "Offer",
+            "price": "18.00",
+            "priceCurrency": "ZAR",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Product",
+          "name": "Decadent Chocolate Cupcake",
+          "image": [
+            "https://YOUR-USERNAME.github.io/sweet-haven/images/cupcakes-choc-400.jpg",
+            "https://YOUR-USERNAME.github.io/sweet-haven/images/cupcakes-choc-800.jpg",
+            "https://YOUR-USERNAME.github.io/sweet-haven/images/cupcakes-choc-1200.jpg"
+          ],
+          "description": "Rich chocolate sponge, chocolate ganache swirl.",
+          "offers": {
+            "@type": "Offer",
+            "price": "20.00",
+            "priceCurrency": "ZAR",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Product",
+          "name": "Country Sourdough (750g)",
+          "image": [
+            "https://YOUR-USERNAME.github.io/sweet-haven/images/bread-sourdough-400.jpg",
+            "https://YOUR-USERNAME.github.io/sweet-haven/images/bread-sourdough-800.jpg",
+            "https://YOUR-USERNAME.github.io/sweet-haven/images/bread-sourdough-1200.jpg"
+          ],
+          "description": "Slow-fermented rustic sourdough loaf.",
+          "offers": {
+            "@type": "Offer",
+            "price": "48.00",
+            "priceCurrency": "ZAR",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+  <!-- Accessibility: Skip to main content -->
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- Header -->
   <header>
@@ -22,7 +109,7 @@
   </header>
 
   <!-- Navigation (same across all pages) -->
-  <nav>
+  <nav aria-label="Primary">
     <div class="container nav-inner">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -33,16 +120,36 @@
     </div>
   </nav>
 
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs container" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">Products</li>
+    </ol>
+  </nav>
+
   <!-- Main menu content -->
-  <main class="container">
+  <main class="container" id="main">
     <section>
       <h2>Our Menu</h2>
       <p class="lead">Browse our fresh, handcrafted bakes. Prices may vary seasonally.</p>
     </section>
 
+    <!-- In-page jump menu -->
+    <nav class="toc" aria-label="Jump to category">
+      <ul>
+        <li><a href="#cupcakes">Cupcakes</a></li>
+        <li><a href="#muffins">Muffins</a></li>
+        <li><a href="#cakes">Cakes</a></li>
+        <li><a href="#pastries">Pastries</a></li>
+        <li><a href="#breads">Breads</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+      </ul>
+    </nav>
+
     <!-- Cupcakes -->
-    <section id="cupcakes">
-      <h3>Cupcakes (Standard Designs)</h3>
+    <section id="cupcakes" aria-labelledby="cupcakes-heading">
+      <h3 id="cupcakes-heading">Cupcakes (Standard Designs)</h3>
       <p>Moist sponge topped with smooth buttercream. Perfect for everyday treats and small celebrations.</p>
 
       <div class="menu-grid">
@@ -79,8 +186,8 @@
     </section>
 
     <!-- Muffins -->
-    <section id="muffins">
-      <h3>Muffins (Daily Flavours)</h3>
+    <section id="muffins" aria-labelledby="muffins-heading">
+      <h3 id="muffins-heading">Muffins (Daily Flavours)</h3>
       <p>Fresh every morning. Ask in store for today’s flavours.</p>
 
       <div class="menu-grid">
@@ -117,8 +224,8 @@
     </section>
 
     <!-- Celebration cakes -->
-    <section id="cakes">
-      <h3>Celebration Cakes</h3>
+    <section id="cakes" aria-labelledby="cakes-heading">
+      <h3 id="cakes-heading">Celebration Cakes</h3>
       <p>Made to order. Standard sizes and flavours below. Custom designs available on request.</p>
 
       <div class="menu-grid">
@@ -170,8 +277,8 @@
     </section>
 
     <!-- Pastries -->
-    <section id="pastries">
-      <h3>Pastries</h3>
+    <section id="pastries" aria-labelledby="pastries-heading">
+      <h3 id="pastries-heading">Pastries</h3>
       <p>Flaky, buttery layers — baked fresh daily.</p>
 
       <div class="menu-grid">
@@ -208,8 +315,8 @@
     </section>
 
     <!-- Breads -->
-    <section id="breads">
-      <h3>Artisanal Breads</h3>
+    <section id="breads" aria-labelledby="breads-heading">
+      <h3 id="breads-heading">Artisanal Breads</h3>
       <p>Slow-fermented, baked on stone for flavour and crust.</p>
 
       <div class="menu-grid">
@@ -230,7 +337,7 @@
 
         <figure class="menu-card">
           <img
-            src="images/bread-health-800.jpg"
+            src="images/bread-seeded-800.jpg"
             srcset="images/bread-seeded-400.jpg 400w,
                     images/bread-seeded-800.jpg 800w,
                     images/bread-seeded-1200.jpg 1200w"
@@ -246,8 +353,8 @@
     </section>
 
     <!-- Cookies -->
-    <section id="cookies">
-      <h3>Cookie Collections</h3>
+    <section id="cookies" aria-labelledby="cookies-heading">
+      <h3 id="cookies-heading">Cookie Collections</h3>
       <p>Sold individually or as gift boxes.</p>
 
       <div class="menu-grid">
@@ -284,17 +391,19 @@
     </section>
 
     <!-- Ordering help -->
-    <section>
-      <h3>How to Order</h3>
+    <section aria-labelledby="order-heading">
+      <h3 id="order-heading">How to Order</h3>
       <p>Visit our store or <a href="contact.html">contact us</a> for custom cake quotes and bulk orders.</p>
     </section>
+
+    <!-- Back to top -->
+    <p class="back-to-top"><a href="#top">Back to top ↑</a></p>
   </main>
 
   <!-- Footer -->
   <footer>
     <div class="container footer-inner">
       <div class="social-icons">
-        <!-- icons unchanged -->
         <a class="facebook" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.16 1.8.16v2h-1c-1 0-1.3.62-1.3 1.25V12h2.2l-.35 3h-1.85v7A10 10 0 0 0 22 12z"/></svg>
         </a>
@@ -309,9 +418,8 @@
         </a>
       </div>
 
-      <p class="footer-bottom">&copy; 2024 Sweet Haven Bakery. All rights reserved.</p>
+      <p class="footer-bottom">&copy; <span id="year">2024</span> Sweet Haven Bakery. All rights reserved.</p>
     </div>
   </footer>
-
 </body>
 </html>

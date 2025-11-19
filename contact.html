@@ -2,17 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us - Sweet Haven Bakery</title>
 
-  <!-- Headings font (Pacifico) -->
+  <!-- SEO -->
+  <meta name="description" content="Contact Sweet Haven Bakery in Cape Town. Phone, email, address and a quick inquiry form for custom cakes and orders.">
+  <link rel="canonical" href="https://Sophycoder519.github.io/sweet-haven/contact.html">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact Sweet Haven Bakery" />
+  <meta property="og:description" content="Call, email or message Sweet Haven Bakery in Cape Town. Find us on the map and get directions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://Sophycoder519.github.io/sweet-haven/contact.html" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
 
-  <!-- Your stylesheet -->
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Site-wide JS -->
+  <script src="js/main.js" defer></script>
+
+  <!-- Structured Data (Local Business / Bakery) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Sweet Haven Bakery",
+    "url": "https://Sophycoder519.github.io/sweet-haven/",
+    "image": "https://Sophycoder519.github.io/sweet-haven/images/cake-vanilla-800.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Long Street",
+      "addressLocality": "Cape Town",
+      "postalCode": "8001",
+      "addressCountry": "ZA"
+    },
+    "telephone": "+27 21 300 1234",
+    "email": "hello@sweethavenbakery.co.za",
+    "geo": { "@type": "GeoCoordinates", "latitude": -33.9249, "longitude": 18.4241 },
+    "sameAs": ["https://www.facebook.com","https://www.instagram.com","https://www.tiktok.com"]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+
+  <!-- Skip link -->
+  <a href="#main" class="skip-link">Skip to content</a>
 
   <!-- Header -->
   <header>
@@ -23,7 +62,7 @@
   </header>
 
   <!-- Navigation -->
-  <nav>
+  <nav aria-label="Primary">
     <div class="container nav-inner">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -33,7 +72,16 @@
       </ul>
     </div>
   </nav>
-  <main class="container">
+
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs container" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">Contact Us</li>
+    </ol>
+  </nav>
+
+  <main class="container" id="main" role="main">
 
     <!-- Contact details-->
     <section aria-labelledby="contact-details">
@@ -42,14 +90,48 @@
         <p><strong>Landline:</strong> <a href="tel:+27213001234" title="Call Sweet Haven landline">+27 21 300 1234</a></p>
         <p><strong>Cellphone:</strong> <a href="tel:+27825550198" title="Call Sweet Haven cellphone">+27 82 555 0198</a></p>
         <p><strong>Email:</strong> <a href="mailto:hello@sweethavenbakery.co.za" title="Email Sweet Haven">hello@sweethavenbakery.co.za</a></p>
-        <p><strong>Location:</strong> Cape Town, South Africa</p>
+        <p><strong>Location:</strong> 123 Long Street, Cape Town, 8001, South Africa</p>
       </address>
     </section>
 
+    <!-- Map + Directions -->
+    <section aria-labelledby="map-heading">
+      <h2 id="map-heading">Find Us</h2>
+      <div class="map-embed" role="region" aria-label="Map of Sweet Haven Bakery">
+        <iframe
+          title="Map showing Sweet Haven Bakery on Long Street, Cape Town"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=123+Long+Street,+Cape+Town+8001&output=embed">
+        </iframe>
+      </div>
+      <p>
+        <a class="button" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/dir/?api=1&destination=123+Long+Street,+Cape+Town+8001">
+          Get Directions
+        </a>
+      </p>
+    </section>
+
     <!-- Inquiry form-->
-    <section>
-      <h2>Send Us an Inquiry</h2>
-      <form class="form" action="mailto:hello@sweethavenbakery.co.za" method="post" enctype="text/plain">
+    <section aria-labelledby="inquiry-heading">
+      <h2 id="inquiry-heading">Send Us an Inquiry</h2>
+
+      <!-- Status region (screen-reader friendly) -->
+      <p id="formStatus" class="visually-hidden" aria-live="polite"></p>
+
+      <form class="form"
+            action="mailto:hello@sweethavenbakery.co.za"
+            method="post"
+            enctype="text/plain"
+            aria-describedby="form-note">
+
+        <!-- Honeypot (anti-spam) -->
+        <div class="visually-hidden" aria-hidden="true">
+          <label for="company">Company (leave blank)</label>
+          <input type="text" id="company" name="Company" tabindex="-1" autocomplete="off">
+        </div>
+
         <label for="name">Full Name</label>
         <input type="text" id="name" name="Name" autocomplete="name" required>
 
@@ -70,12 +152,26 @@
         <label for="message">Message</label>
         <textarea id="message" name="Message" rows="6" maxlength="1000" required></textarea>
 
-        <button type="submit">Send Inquiry</button>
-        <button type="reset">Clear</button>
+        <!-- Consent -->
+        <div class="checkbox">
+          <input type="checkbox" id="consent" name="Consent" required>
+          <label for="consent">I agree that Sweet Haven may contact me regarding this inquiry.</label>
+        </div>
 
-        <p class="lead" role="note">Note: Submitting opens your email app to send this message.</p>
+        <div class="actions">
+          <button type="submit">Send Inquiry</button>
+          <button type="reset" formnovalidate>Clear</button>
+        </div>
+
+        <p id="form-note" class="lead" role="note">
+          Note: Submitting opens your email app to send this message. For a fully online form, we’ll add a backend in Part 3.
+        </p>
+        <noscript><p class="small">JavaScript is off — that’s fine, but some form enhancements won’t run.</p></noscript>
       </form>
     </section>
+
+    <!-- Back to top (anchor) -->
+    <p class="back-to-top"><a href="#top">Back to top ↑</a></p>
   </main>
 
   <!-- Footer -->
@@ -89,6 +185,7 @@
           <p>Cell: <a href="tel:+27825550198">+27 82 555 0198</a></p>
           <p>Email: <a href="mailto:hello@sweethavenbakery.co.za">hello@sweethavenbakery.co.za</a></p>
         </section>
+
         <section>
           <h3>Quick Links</h3>
           <ul class="list">
@@ -97,48 +194,34 @@
             <li><a href="about.html">Our Story</a></li>
           </ul>
         </section>
+
         <section>
           <h3>Follow</h3>
           <div class="social-icons">
-            <a class="facebook"
-               href="https://www.facebook.com"
-               target="_blank" rel="noopener noreferrer"
-               title="Facebook" aria-label="Facebook">
+            <a class="facebook" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.16 1.8.16v2h-1c-1 0-1.3.62-1.3 1.25V12h2.2l-.35 3h-1.85v7A10 10 0 0 0 22 12z"/>
               </svg>
             </a>
-        
-            <a class="whatsapp"
-               href="https://www.whatsapp.com"
-               target="_blank" rel="noopener noreferrer"
-               title="WhatsApp" aria-label="WhatsApp">
+            <a class="whatsapp" href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M20 3.5A10 10 0 0 0 4 17.3L3 21l3.8-1A10 10 0 1 0 20 3.5zm-8.1 3.4c-.3-.01-.7.02-1 .3-.3.3-.9 1-.9 2s.6 2.3 1.8 3.4c1.2 1.2 2.8 1.8 3.4 1.8.7 0 1.6-.5 1.9-.9.2-.4.2-.7.1-.8l-1.2-1c-.2-.2-.4-.2-.6-.1l-.7.3c-.2.1-.4 0-.5-.1l-1.1-.8c-.4-.3-.9-.9-1.1-1.2-.1-.2-.1-.4.1-.6l.3-.6c.1-.2 0-.4-.1-.6L12 7c-.1-.1-.3-.1-.5-.1z"/>
               </svg>
             </a>
-        
-            <a class="tiktok"
-               href="https://www.tiktok.com"
-               target="_blank" rel="noopener noreferrer"
-               title="TikTok" aria-label="TikTok">
+            <a class="tiktok" href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" title="TikTok" aria-label="TikTok">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M16 3h-2v8.5a3.5 3.5 0 1 1-3-3.45V6a6.5 6.5 0 1 0 9 6.1v-1.2a6 6 0 0 1-4-1.9V3z"/>
               </svg>
             </a>
-        
-            <a class="instagram"
-               href="https://www.instagram.com"
-               target="_blank" rel="noopener noreferrer"
-               title="Instagram" aria-label="Instagram">
+            <a class="instagram" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram">
               <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13zm0 2a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm6-2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1 5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13zm0 2a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm6-2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
               </svg>
             </a>
           </div>
         </section>
       </div>
-      <p class="footer-bottom">&copy; 2024 Sweet Haven Bakery. All rights reserved.</p>
+      <p class="footer-bottom">&copy; <span id="year"></span> Sweet Haven Bakery. All rights reserved.</p>
     </div>
   </footer>
 
