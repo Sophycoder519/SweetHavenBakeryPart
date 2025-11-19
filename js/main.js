@@ -61,7 +61,7 @@
       });
     });
   }
-
+  
   /* ----------------------------- Lightbox (About) ---------------------- */
   function initLightbox() {
     if (!isAboutPage) return;
