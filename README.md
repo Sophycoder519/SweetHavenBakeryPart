@@ -9,10 +9,14 @@ Sweet Haven Bakery  (Part 1 and 2)
 - **Module:** [WEDE5020]
 
 ## 3) Project Overview (complete)
-Part 1 focus: A static, multi-page website for “Sweet Haven Bakery” built in **Part 1** with **HTML only** (no CSS/JS).  
+-**Part 1 focus:** A static, multi-page website for “Sweet Haven Bakery” built in **Part 1** with **HTML only** (no CSS/JS).  
 Pages: Home, About, Products (static menu with images & prices), Contact (inquiry form, phone & email).  
 Focus: correct HTML structure, content integration, working navigation, and accessibility basics (alt text, headings).
-• Part 2 focus: mobile-first CSS styling & responsiveness, real social media icons (inline SVG), relative units (rem/em/%), and responsive images (srcset + sizes).
+-**Part 2 focus:** mobile-first CSS styling & responsiveness, real social media icons (inline SVG), relative units (rem/em/%), and responsive images (srcset + sizes).
+- **Part 3:** Enhancing the website with JavaScript and backend integration.
+  - **Contact Form Handling:** Convert the form into a fully working contact form (via JavaScript and backend) to send messages to Sweet Haven Bakery.
+  - **Interactive Features:** Add dynamic elements such as form validation, notifications, and additional user interactivity using JavaScript.
+  - **Backend Integration:** Implement a backend to handle form submissions (this may require using services like Formspree or building your own server-side functionality).
 
 ## 4) Website Goals and Objectives
 - Present bakery brand, story, and offerings clearly.
@@ -20,6 +24,10 @@ Focus: correct HTML structure, content integration, working navigation, and acce
 - Allow customers to make basic inquiries via a contact form (mailto).
 - Ensure simple, consistent navigation across pages.
 - Lays the foundation for future styling (Part 2) and interactivity (Part 3).
+ Present bakery brand, story, and offerings clearly.
+- Provide a static menu with images, descriptions, and pricing (static in Part 1, dynamic in Part 3).
+- Allow customers to make inquiries and submit messages via an enhanced form (JavaScript + backend handling).
+- Ensure smooth navigation and interactivity across all pages.
 
 ## 5) Key Features and Functionality
 
@@ -45,6 +53,11 @@ Focus: correct HTML structure, content integration, working navigation, and acce
   `srcset="… 400w, … 800w, … 1200w"` and
   `sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"`.
 
+### Part 3 (JavaScript + Backend)
+- **Form Handling**: Using JavaScript to validate form fields, provide feedback to users, and send submissions to the bakery’s email (or via a service like Formspree).
+- **Interactive Elements**: Add interactivity such as success/failure notifications after form submission, and dynamically updated content.
+- **Backend Integration**: Integrate a backend to handle form submissions securely (Formspree, Firebase, or custom server-side handling).
+
 ## 6) Timeline and Milestones
 Part 1
 | Milestone | Target Date | Status |
@@ -58,7 +71,7 @@ Part 2: Add CSS / tokens / layout | [2025-09-22] | ✅
 Part 2: Social icons (SVG) across pages | [2025-09-22] | ✅
 Part 2: Responsive images (srcset/sizes) | [2025-09-26] | ✅
 Part 2: Accessibility pass (focus/contrast/alt) | [2025-09-23] | ✅
-
+Part 3: JavaScript and Backend Integration | 2025-10-15 | In Progress |
 
 ## 7) Part 1 Details
 - **What’s included:** HTML pages only; images added; mailto form; no CSS/JS.
